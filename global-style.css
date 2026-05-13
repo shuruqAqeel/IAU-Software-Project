@@ -1,11 +1,23 @@
- .u-section-1 {
-  --color-var: #ccd3db;
+/* --- Navigation Menu Styling: Set text color to White --- */
+.u-nav-link, .u-menu .u-nav-link {
+    color: #ffffff !important; /* Forces menu links to be white */
+}
+
+/* Ensure menu links stay white when hovered */
+.u-nav-link:hover {
+    color: #ffffff !important;
+}
+
+/* --- Section 1 Layout & Variables --- */
+.u-section-1 {
+  --color-var: #ccd3db; /* Light blue background variable */
 }
 
 .u-section-1 .u-sheet-1 {
   min-height: 408px;
 }
 
+/* Centered group container for Section 1 */
 .u-section-1 .u-group-1 {
   width: 800px;
   min-height: 250px;
@@ -20,6 +32,7 @@
   margin: 0 auto;
 }
 
+/* Responsive adjustments for Section 1 */
 @media (max-width: 1199px) {
   .u-section-1 .u-custom-html-1 {
     margin-right: initial;
@@ -48,7 +61,10 @@
   .u-section-1 .u-group-1 {
     width: 340px;
   }
-} .u-section-2 {
+} 
+
+/* --- Section 2: Video Container Styling --- */
+.u-section-2 {
   --color-var: #ccd3db;
 }
 
@@ -62,6 +78,7 @@
   margin: 0 auto;
 }
 
+/* Responsive video sizes */
 @media (max-width: 767px) {
   .u-section-2 .u-sheet-1 {
     min-height: 463px;
@@ -82,7 +99,10 @@
     width: 340px;
     height: 292px;
   }
-} .u-section-3 {
+} 
+
+/* --- Section 3 Layout --- */
+.u-section-3 {
   --color-var: #ccd3db;
 }
 
@@ -96,25 +116,13 @@
   margin: 166px auto 60px;
 }
 
-@media (max-width: 1199px) {
-  .u-section-3 .u-custom-html-1 {
-    margin-right: initial;
-    margin-left: initial;
-  }
-}
- .u-section-1 {
-  --color-var: #ccd3db;
-}
-
-.u-section-1 .u-sheet-1 {
-  min-height: 681px;
-}
-
+/* --- Section 1 Specific Elements: Text and Custom Buttons --- */
 .u-section-1 .u-text-1 {
   font-weight: 700;
   margin: 63px auto 0;
 }
 
+/* Round button styling with Dark Blue background */
 .u-section-1 .u-btn-1 {
   --radius: 50px;
   font-weight: 700;
@@ -137,6 +145,7 @@
   margin: -39px auto 0 86px;
 }
 
+/* Centered Logout/Call-to-action button */
 .u-section-1 .u-btn-3 {
   display: block !important;
   position: relative !important;
@@ -150,8 +159,8 @@
   text-transform: none;
   width: fit-content !important;
 }
-}
 
+/* Responsive button alignment */
 @media (max-width: 1199px) {
   .u-section-1 .u-btn-1 {
     margin-top: -40px;
@@ -162,13 +171,16 @@
     margin-left: 0;
   }
 }
-/* CSS: Table & Button design from Old Code */
+
+/* --- Global Sheet Layout: Flexbox alignment --- */
 .u-sheet-1 {
  display: flex !important;
  flex-direction: column !important;
  align-items: center !important;
  gap: 30px !important;
 }
+
+/* Wrapper for horizontal buttons */
 .buttons-wrapper {
  display: flex !important;
  flex-direction: row !important;
@@ -176,19 +188,25 @@
  gap: 20px !important;
  width: 100%;
 }
+
+/* General Button Design */
 .u-btn {
- background-color: #06233E !important;
+ background-color: #06233E !important; /* IAU Dark Blue */
  color: white !important;
  border: none !important;
  position: static !important;
  margin: 0 !important;
  padding: 10px 30px !important;
 }
+
+/* Table containers (Hidden by default, shown via JavaScript) */
 #teacherTable, #studentTable {
  display: none;
  width: 80% !important;
  margin: 20px auto !important;
 }
+
+/* --- Standardized Table Styling --- */
 table {
  border-collapse: collapse;
  text-align: center;
@@ -196,11 +214,15 @@ table {
  margin: 20px auto;
  background-color: white;
 }
+
+/* Table Header styling */
 table th {
  background-color: #06233E;
  color: white;
  padding: 15px;
 }
+
+/* Table Cell styling */
 table td {
  padding: 10px;
  border: 1px solid #ddd;
