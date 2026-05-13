@@ -17,7 +17,18 @@
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&family=Open+Sans:wght@300;400;700">
     
     <style>
-        /* --- Layout & Flexbox Styles --- */
+        /* --- 1. Navigation Menu Style (Added to make it White) --- */
+        .u-nav-link, 
+        .u-menu .u-nav-link,
+        .u-nav-item a {
+            color: #ffffff !important; /* Forces menu text to be white */
+        }
+
+        .u-nav-link:hover {
+            color: #ffffff !important;
+        }
+
+        /* --- 2. Layout & Flexbox Styles --- */
         .u-sheet-1 {
             display: flex !important;
             flex-direction: column !important;
@@ -25,7 +36,7 @@
             gap: 30px !important;
         }
 
-        /* --- Buttons Wrapper Style --- */
+        /* --- 3. Buttons Wrapper Style --- */
         .buttons-wrapper {
             display: flex !important;
             flex-direction: row !important;
@@ -34,7 +45,7 @@
             width: 100%;
         }
 
-        /* --- Custom Button Styling --- */
+        /* --- 4. Custom Button Styling --- */
         .u-btn {
             background-color: #06233E !important;
             color: white !important;
@@ -45,14 +56,14 @@
             cursor: pointer;
         }
 
-        /* --- Table Container (Hidden by Default) --- */
+        /* --- 5. Table Container --- */
         .table-container {
             display: none; 
             width: 80% !important;
             margin: 20px auto !important;
         }
 
-        /* --- Standard Table Styling --- */
+        /* --- 6. Standard Table Styling --- */
         table {
             border-collapse: collapse;
             text-align: center;
@@ -71,27 +82,20 @@
     </style>
 
     <script>
-        /**
-         * Function to toggle table visibility
-         * @param {string} tableId - The ID of the table to be displayed
-         */
         function showTable(tableId) {
-            // Hide all table containers first
             document.getElementById('teacherTable').style.display = 'none';
             document.getElementById('studentTable').style.display = 'none';
-            
-            // Show the specific table based on the passed ID
             document.getElementById(tableId).style.display = 'block';
         }
     </script>
 </head>
 
 <body class="u-body u-clearfix u-xl-mode">
-    <header class="u-clearfix u-color-var u-header" id="header">
+    <header class="u-clearfix u-color-var u-header" id="header" style="background-color: #06233e !important;">
         <div class="u-clearfix u-sheet u-sheet-1">
-<a href="#" class="u-align-center u-image u-logo u-image-1" data-image-width="295" data-image-height="171">
-    <img src="images.jpg" onerror="this.src='images/images.jpg'" class="u-logo-image u-logo-image-1">
-</a>
+            <a href="#" class="u-align-center u-image u-logo u-image-1">
+                <img src="images.jpg" onerror="this.src='images/images.jpg'" class="u-logo-image u-logo-image-1">
+            </a>
             
             <nav class="u-align-right u-menu u-menu-one-level u-offcanvas u-menu-1">
                 <div class="u-nav-container">
