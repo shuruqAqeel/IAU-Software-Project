@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Imam Abdulrahman bin Faisal University, Select Information">
+    <meta name="description" content="">
+    <title>userInformationPage</title>
+    
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link rel="stylesheet" href="userInformationPage.css" media="screen">
+    
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    
+    <meta name="generator" content="Nicepage 8.4.14, nicepage.com">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&family=Open+Sans:wght@300;400;700">
+    
+    <style>
+        /* --- Layout & Flexbox Styles --- */
+        .u-sheet-1 {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            gap: 30px !important;
+        }
+
+        /* --- Buttons Wrapper Style --- */
+        .buttons-wrapper {
+            display: flex !important;
+            flex-direction: row !important;
+            justify-content: center !important;
+            gap: 20px !important;
+            width: 100%;
+        }
+
+        /* --- Custom Button Styling --- */
+        .u-btn {
+            background-color: #06233E !important;
+            color: white !important;
+            border: none !important;
+            position: static !important;
+            margin: 0 !important;
+            padding: 10px 30px !important;
+            cursor: pointer;
+        }
+
+        /* --- Table Container (Hidden by Default) --- */
+        .table-container {
+            display: none; 
+            width: 80% !important;
+            margin: 20px auto !important;
+        }
+
+        /* --- Standard Table Styling --- */
+        table {
+            border-collapse: collapse;
+            text-align: center;
+            width: 100%;
+            background-color: white;
+        }
+        table th {
+            background-color: #06233E;
+            color: white;
+            padding: 15px;
+        }
+        table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
+
+    <script>
+        /**
+         * Function to toggle table visibility
+         * @param {string} tableId - The ID of the table to be displayed
+         */
+        function showTable(tableId) {
+            // Hide all table containers first
+            document.getElementById('teacherTable').style.display = 'none';
+            document.getElementById('studentTable').style.display = 'none';
+            
+            // Show the specific table based on the passed ID
+            document.getElementById(tableId).style.display = 'block';
+        }
+    </script>
+</head>
+
+<body class="u-body u-clearfix u-xl-mode">
+    <header class="u-clearfix u-color-var u-header" id="header">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <a href="#" class="u-align-center u-image u-logo u-image-1">
+                <img src="images/images.jpg" class="u-logo-image u-logo-image-1">
+            </a>
+            
+            <nav class="u-align-right u-menu u-menu-one-level u-offcanvas u-menu-1">
+                <div class="u-nav-container">
+                    <ul class="u-nav u-unstyled u-nav-1">
+                        <li class="u-nav-item"><a class="u-button-style u-nav-link" href="#" onclick="alert('You cannot return to the home page until you log out');">homePage</a></li>
+                        <li class="u-nav-item"><a class="u-button-style u-nav-link" href="userInformationPage.html">userInformationPage</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <h2 class="u-align-center u-text u-text-body-alt-color u-text-1">Imam Abdulrahman bin Faisal University</h2>
+        </div>
+    </header>
+
+    <section class="u-clearfix u-color-var u-section-1" id="block-3">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <h1 class="u-text u-text-default u-text-1">Select Information</h1>
+            
+            <div class="buttons-wrapper">
+                <button onclick="showTable('teacherTable')" class="u-btn u-btn-round u-button-style u-radius">Teacher Information</button>
+                <button onclick="showTable('studentTable')" class="u-btn u-btn-round u-button-style u-radius">Student Information</button>
+            </div>
+
+            <div id="teacherTable" class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>class_id</th>
+                            <th>classname</th>
+                            <th>teachername</th>
+                            <th>coursename</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>101</td><td>C201</td><td>Khaled</td><td>Management</td></tr>
+                        <tr><td>102</td><td>C202</td><td>Ahmed</td><td>Software</td></tr>
+                        <tr><td>103</td><td>C203</td><td>Emaan</td><td>IT</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="studentTable" class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>room_id</th>
+                            <th>roomnumber</th>
+                            <th>capacity</th>
+                            <th>roomtype</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>801</td><td>A801</td><td>15</td><td>Lab</td></tr>
+                        <tr><td>802</td><td>A802</td><td>25</td><td>Hall</td></tr>
+                        <tr><td>803</td><td>B801</td><td>30</td><td>Workshop</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <a href="./" class="u-btn u-btn-round u-button-style u-radius u-btn-3">logout</a>
+        </div>
+    </section>
+
+    <footer class="u-align-center u-clearfix u-color-var u-footer" id="footer">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <div class="u-expanded-width u-list u-list-1">
+                <div class="u-repeater u-repeater-1">
+                    <div class="u-container-style u-list-item u-repeater-item">
+                        <div class="u-container-layout u-valign-middle-xl">
+                            <p class="u-align-center u-text-body-alt-color">© 2026 Your website. All rights reserved</p>
+                        </div>
+                    </div>
+                    <div class="u-container-style u-list-item u-repeater-item">
+                        <div class="u-container-layout u-valign-middle-xl">
+                            <p class="u-align-center u-text-body-alt-color">privacy policy</p>
+                        </div>
+                    </div>
+                    <div class="u-container-style u-list-item u-repeater-item">
+                        <div class="u-container-layout u-valign-middle-xl">
+                            <p class="u-align-center u-text-body-alt-color">Terms of Service</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
